@@ -16,4 +16,4 @@ jobs:
         run: date
 
       - name: Show repository name
-        run: echo "Repository: $GITHUB_REPOSITORY"
+        run: 'echo "Repository: $GITHUB_REPOSITORY"'
