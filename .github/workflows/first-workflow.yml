@@ -1,8 +1,13 @@
+
 name: My First GitHub Action
 
 on:
   push:
   workflow_dispatch:
+
+env:
+  STUDENT_NAME: Vishal
+  COURSE_NAME: GitHub Actions
 
 jobs:
   first-job:
@@ -16,7 +21,14 @@ jobs:
         run: date
 
       - name: Show repository name
-        run: 'echo "Repository: $GITHUB_REPOSITORY"'
+        run: echo "Repository: $GITHUB_REPOSITORY"
 
       - name: Print my name
         run: echo "Hello, Vishal! I am learning GitHub Actions."
+
+      - name: Show environment variables
+        run: |
+          echo "Student: $STUDENT_NAME"
+          echo "Course: $COURSE_NAME"
+          echo "Repository: $GITHUB_REPOSITORY"
+          echo "Workspace: $GITHUB_WORKSPACE"
