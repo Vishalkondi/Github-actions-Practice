@@ -17,3 +17,6 @@ jobs:
 
       - name: Show repository name
         run: 'echo "Repository: $GITHUB_REPOSITORY"'
+
+      - name: Print my name
+        run: echo "Hello, Vishal! I am learning GitHub Actions."
