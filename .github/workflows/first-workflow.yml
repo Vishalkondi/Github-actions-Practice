@@ -41,3 +41,7 @@ jobs:
           echo "Event: $EVENT_NAME"
           echo "Branch: $BRANCH_NAME"
           echo "Actor: $ACTOR_NAME"
+
+      - name: Run only on push
+        if: ${{ github.event_name == 'push' }}
+        run: echo "This step runs only on a push event."
