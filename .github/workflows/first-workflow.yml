@@ -1,3 +1,4 @@
+
 name: My First GitHub Action
 
 on:
@@ -48,8 +49,13 @@ jobs:
 
   second-job:
     runs-on: ubuntu-latest
-    needs: first-job
 
     steps:
       - name: Report success
-        run: echo "Second job started after first-job completed successfully."
+        run: echo "Second job completed successfully."
+
+      - name: Show job information
+        run: |
+          echo "This is an independent job."
+          echo "Student: $STUDENT_NAME"
+          echo "Course: $COURSE_NAME"
